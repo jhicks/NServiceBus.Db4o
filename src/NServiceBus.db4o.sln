@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServicebus.Db4o.Tests", "NServicebus.Db4o.Tests\NServicebus.Db4o.Tests.csproj", "{03C91AF1-18E3-4803-845B-ECE29005E9DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBus.SagaPersisters.Db4o", "NServiceBus.SagaPersisters.Db4o\NServiceBus.SagaPersisters.Db4o.csproj", "{ED0A674C-59AF-4F1E-995C-91871A55A454}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBus.Unicast.Subscriptions.Db4o", "NServiceBus.Unicast.Subscriptions.Db4o\NServiceBus.Unicast.Subscriptions.Db4o.csproj", "{731F3330-040D-4BCD-8DA9-22D9144E2D5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBus.Unitcast.Subscriptions.Db4o.Tests", "NServiceBus.Unitcast.Subscriptions.Db4o.Tests\NServiceBus.Unitcast.Subscriptions.Db4o.Tests.csproj", "{2BBA3940-955D-42E0-ACC9-EC4C8DBF6F75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBus.SagaPersisters.Db4o.Tests", "NServiceBus.SagaPersisters.Db4o.Tests\NServiceBus.SagaPersisters.Db4o.Tests.csproj", "{51380700-5D26-481E-989D-154CC48C431C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBus.Db4o", "NServiceBus.Db4o\NServiceBus.Db4o.csproj", "{437C7627-FF29-45FD-BDAB-DA3F7D39FD57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03C91AF1-18E3-4803-845B-ECE29005E9DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C91AF1-18E3-4803-845B-ECE29005E9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C91AF1-18E3-4803-845B-ECE29005E9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C91AF1-18E3-4803-845B-ECE29005E9DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED0A674C-59AF-4F1E-995C-91871A55A454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED0A674C-59AF-4F1E-995C-91871A55A454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED0A674C-59AF-4F1E-995C-91871A55A454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED0A674C-59AF-4F1E-995C-91871A55A454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{731F3330-040D-4BCD-8DA9-22D9144E2D5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{731F3330-040D-4BCD-8DA9-22D9144E2D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{731F3330-040D-4BCD-8DA9-22D9144E2D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{731F3330-040D-4BCD-8DA9-22D9144E2D5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BBA3940-955D-42E0-ACC9-EC4C8DBF6F75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BBA3940-955D-42E0-ACC9-EC4C8DBF6F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BBA3940-955D-42E0-ACC9-EC4C8DBF6F75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BBA3940-955D-42E0-ACC9-EC4C8DBF6F75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51380700-5D26-481E-989D-154CC48C431C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51380700-5D26-481E-989D-154CC48C431C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51380700-5D26-481E-989D-154CC48C431C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51380700-5D26-481E-989D-154CC48C431C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{437C7627-FF29-45FD-BDAB-DA3F7D39FD57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{437C7627-FF29-45FD-BDAB-DA3F7D39FD57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{437C7627-FF29-45FD-BDAB-DA3F7D39FD57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{437C7627-FF29-45FD-BDAB-DA3F7D39FD57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
