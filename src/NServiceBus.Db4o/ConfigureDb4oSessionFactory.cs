@@ -15,7 +15,6 @@ namespace NServiceBus
             ICurrentSessionContext currentSessionContext, IServerConfiguration serverConfig, 
             string dbFileName, int port, params HostedServerSessionFactory.Access[] access)
         {
-
             var sessionFactory = new HostedServerSessionFactory(currentSessionContext, serverConfig, dbFileName, port, access);
             config.Configurer.RegisterSingleton<ISessionFactory>(sessionFactory);
             return config;
@@ -41,9 +40,12 @@ namespace NServiceBus
             return config;
         }
 
-        public static Configure Db4oRemoteDatabase(this Configure config)
+        public static Configure Db4oRemoteDatabase(this Configure config, Func<IClientConfiguration> clientConfig)
         {
-            return config;
+            var configSettings = Configure.GetConfigSection<Db4oConnectionConfig>();
+            var currentSessionContextType = Type.GetType(configSettings.CurrentSessionContext);
+            var currentSessionContext = (ICurrentSessionContext)Activator.CreateInstance(currentSessionContextType);
+            return Db4oRemoteDatabase(config, currentSessionContext, clientConfig, configSettings.Host, configSettings.Port, configSettings.Username, configSettings.Password);
         }
     }
 }
