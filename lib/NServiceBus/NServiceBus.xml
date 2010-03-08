@@ -49,6 +49,26 @@
       <returns>
       </returns>
     </member>
+    <member name="M:NServiceBus.ExtensionMethods.GetHttpFromHeader(NServiceBus.IMessage)">
+      <summary>
+            If the source of this message was an Http endpoint, returns its address
+            otherwise returns null.
+            </summary>
+      <param name="msg">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:NServiceBus.ExtensionMethods.GetHttpToHeader(NServiceBus.IMessage)">
+      <summary>
+            If the target destination of this message is an Http endpoint,
+            return the address of that target, otherwise null.
+            </summary>
+      <param name="msg">
+      </param>
+      <returns>
+      </returns>
+    </member>
     <member name="M:NServiceBus.ExtensionMethods.SetHeader(NServiceBus.IMessage,System.String,System.String)">
       <summary>
             Sets the value of the header for the given key.
@@ -56,6 +76,26 @@
       <param name="msg">
       </param>
       <param name="key">
+      </param>
+      <param name="value">
+      </param>
+    </member>
+    <member name="M:NServiceBus.ExtensionMethods.SetHttpFromHeader(NServiceBus.IMessage,System.String)">
+      <summary>
+            Sets the Http address from which this message was received.
+            This method is reserved for the NServiceBus Gateway.
+            </summary>
+      <param name="msg">
+      </param>
+      <param name="value">
+      </param>
+    </member>
+    <member name="M:NServiceBus.ExtensionMethods.SetHttpToHeader(NServiceBus.IMessage,System.String)">
+      <summary>
+            Sets the Http address to which this message should be sent.
+            Requires the use of the NServiceBus Gateway.
+            </summary>
+      <param name="msg">
       </param>
       <param name="value">
       </param>
@@ -82,6 +122,21 @@
     <member name="P:NServiceBus.ExtensionMethods.CurrentMessageBeingHandled">
       <summary>
             The object used to see whether headers requested are for the handled message.
+            </summary>
+    </member>
+    <member name="T:NServiceBus.Headers">
+      <summary>
+            Static class containing headers used by NServiceBus.
+            </summary>
+    </member>
+    <member name="F:NServiceBus.Headers.HttpFrom">
+      <summary>
+            Header for retrieving from which Http endpoint the message arrived.
+            </summary>
+    </member>
+    <member name="F:NServiceBus.Headers.HttpTo">
+      <summary>
+            Header for specifying to which Http endpoint the message should be delivered.
             </summary>
     </member>
     <member name="T:NServiceBus.IAuthorizeSubscriptions">
@@ -319,6 +374,14 @@
             Moves the message being handled to the back of the list of available 
             messages so it can be handled later.
             </summary>
+    </member>
+    <member name="M:NServiceBus.IBus.ForwardCurrentMessageTo(System.String)">
+      <summary>
+            Forwards the current message being handled to the destination maintaining
+            all of its transport-level properties and headers.
+            </summary>
+      <param name="destination">
+      </param>
     </member>
     <member name="M:NServiceBus.IBus.DoNotContinueDispatchingCurrentMessageToHandlers">
       <summary>
