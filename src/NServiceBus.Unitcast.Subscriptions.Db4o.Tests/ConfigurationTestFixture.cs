@@ -23,7 +23,7 @@ namespace NServiceBus.Unitcast.Subscriptions.Db4o.Tests
         public void SetUp()
         {
             var sessionContext = new ThreadStaticCurrentSessionContext();
-            var serverConfig = Db4objects.Db4o.CS.Db4oClientServer.NewServerConfiguration();
+            var serverConfig = Db4oClientServer.NewServerConfiguration();
             var dbFileName = "ConfigTest.yap";
             var port = 17432;
             var access = new HostedServerSessionFactory.Access() { Username = "nservicebus", Password = "nservicebus" };
@@ -55,8 +55,8 @@ namespace NServiceBus.Unitcast.Subscriptions.Db4o.Tests
             var password = "nservicebus";
             config = Configure.With()
                 .SpringBuilder()
-                .Db4oRemoteDatabase(sessionContext, () => Db4oClientServer.NewClientConfiguration(),host,port,username,password);
-//                .Db4oSubscriptionStorage();
+                .Db4oRemoteDatabase(sessionContext, () => Db4oClientServer.NewClientConfiguration(),host,port,username,password)
+                .Db4oSubscriptionStorage();
         }
 
         [Test]

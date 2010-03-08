@@ -26,7 +26,6 @@ namespace NServiceBus.SagaPersisters.Db4o.Tests
         [SetUp]
         public void SetupSagaPersisterContext()
         {
-            DeleteFile();
             CurrentSessionContext = new ThreadStaticCurrentSessionContext();
             SessionFactory = new HostedServerSessionFactory(CurrentSessionContext, DbFileName);
             SagaPersister = new Db4oSagaPersister(SessionFactory);
