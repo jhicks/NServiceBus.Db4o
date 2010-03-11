@@ -64,14 +64,7 @@
   <ItemGroup>
     <Compile Include="ConfigureDb4oSagaPersister.cs" />
     <Compile Include="Db4oSagaPersister.cs" />
-    <Compile Include="Db4oSagaPersisterConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NServiceBus.Db4o\NServiceBus.Db4o.csproj">
-      <Project>{437C7627-FF29-45FD-BDAB-DA3F7D39FD57}</Project>
-      <Name>NServiceBus.Db4o</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
